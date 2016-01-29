@@ -1,10 +1,10 @@
 class WechatsController < ApplicationController
 	def home
-		if not valid_msg_signature(params)
+		if valid_msg_signature(params)
 		      render text: "", status: 401
-		      return
+		      return false
 		   end
-		    content, status = Prpcrypt.decrypt(aes_key, params[:echostr], corp_id)
+		   # content, status = Prpcrypt.decrypt(aes_key, params[:echostr], corp_id)
 		    render text: content, status: status
 	end
 
@@ -16,5 +16,5 @@ class WechatsController < ApplicationController
 		sort_params       = [qy_token, timestamp, nonce, echo_str].sort.join
 		current_signature = Digest::SHA1.hexdigest(sort_params)
 		current_signature == msg_signature
-    end
+   	 end
 end
