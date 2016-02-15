@@ -1,4 +1,6 @@
 class WechatsController < ApplicationController
+ 
+
 	def home
 		#if valid_msg_signature(params)
 		     #＃ render text: "", status: 401
@@ -30,5 +32,6 @@ class WechatsController < ApplicationController
 		end
 
    	 end
+
 
 end
