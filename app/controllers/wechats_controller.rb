@@ -2,12 +2,8 @@ class WechatsController < ApplicationController
  
 
 	def home
-		#if valid_msg_signature(params)
-		     #＃ render text: "", status: 401
-		      #return false
-		 # end
-		    #content, status = Prpcrypt.decrypt(aes_key, params[:echostr], corp_id)
-		    #render text: content, status: status
+		
+	do_GET	unless response
 		  
 	end
 	#验证token
