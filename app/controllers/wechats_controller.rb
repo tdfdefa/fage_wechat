@@ -1,15 +1,15 @@
 class WechatsController < ApplicationController
- 
+ def home
+   
+  do_GET unless params[:echostr].nil?		
+ end
 
-	def home
-		#if valid_msg_signature(params)
-		    #  render text: "", status: 401
-		     # return false
-		  #end
-		   # content, status = Prpcrypt.decrypt(aes_key, params[:echostr], corp_id)
-		  #  render text: content, status: status
+
+ 	def do_GET(request ,response )
+		response.status = 200
+		response.content_type = "text/plain"
+		response.body = request.query["echostr"]
 	end
-
 	def valid_msg_signature(params)
 	
 		qy_token =  "token"
