@@ -1,7 +1,10 @@
 class WechatsController < ApplicationController
  def home
-   
-  do_GET unless params[:echostr].nil?		
+	
+
+	return render text:params[:echostr]   
+def info
+end
  end
 
 #验证token
