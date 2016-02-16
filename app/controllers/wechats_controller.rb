@@ -10,6 +10,12 @@ class WechatsController < ApplicationController
 	end
 
 	#接受微信服务器消息
+	def  info
+	
+	end
+
+		
+	end
 	def process_request
 		render  "wechats/info",layout: false,:formats => :xml
 	end
