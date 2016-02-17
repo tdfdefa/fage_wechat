@@ -4,8 +4,6 @@ class WechatsController < ApplicationController
 render "wechats/info"
 	end
 def info
-#render params
-#p  params
 end
 
 
