@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root  "wechats#home"
 
-	get  "wechats/info"  
+ post "wechats/info"  
 
 
   # The priority is based upon order of creation: first created -> highest priority.
