@@ -1,5 +1,4 @@
 class WechatsController < ApplicationController
-<<<<<<< HEAD
  def home
 # render text: params[:echostr] 
 render "wechats/info"
@@ -12,24 +11,6 @@ end
 
 	#接受微信服务器消息
 	def request_info
-=======
-
-	def home
-	@@token ="token"
-	#if check_signature?(params[:signature],params[:timestamp],params[:nonce])  
-   	  return render text: params[:echostr]  
-    	#end  		  
-	end
-
-	#接受微信服务器消息
-	def  info
-	
-	end
-
-		
-
-	def process_request
->>>>>>> tmp
 		render  "wechats/info",layout: false,:formats => :xml
 	end
 	#验证token
@@ -39,15 +20,12 @@ end
     		response.content_type = "text/plain"
     		response.body = request.query["echostr"] 
  	end
-<<<<<<< HEAD
 	#验证token方法２	   	
    	 private  
 	  def check_signature?(signature,timestamp,nonce)  
 	    Digest::SHA1.hexdigest([timestamp,nonce,@@token].sort.join) == signature  
 	  end  
 	  #验证token方法3
-=======
->>>>>>> tmp
 
 	def valid_msg_signature(params)
 	
