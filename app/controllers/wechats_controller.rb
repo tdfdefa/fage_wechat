@@ -1,7 +1,8 @@
 class WechatsController < ApplicationController
  def home
-# render text: params[:echostr] 
-render "wechats/info"
+ render text: request.url
+#render "wechats/info"
+#render text:  params
 	end
 def info
 end
