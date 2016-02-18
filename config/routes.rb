@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root  "wechats#home"
+ root  "wechats#home"
 
  post "wechats/info"  
 
